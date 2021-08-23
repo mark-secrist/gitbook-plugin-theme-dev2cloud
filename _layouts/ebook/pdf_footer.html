@@ -1,0 +1,8 @@
+{% extends "./page.html" %}
+
+{% block body %}
+<div class="pdf-footer">
+    <span>{{ config.team|d("Couchbase Academy ©", true) }} {{ page.section }}</span>
+    <span class="footer-pages-count">{{ page.num }}</span>
+</div>
+{% endblock %}

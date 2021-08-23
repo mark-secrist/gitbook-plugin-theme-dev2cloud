@@ -1,0 +1,48 @@
+/* add logo */
+body {
+  font-size: 15px;
+}
+.page-inner {
+  .markdown-section {
+    h1 {
+      &:first-child {
+        background: url(../images/couchbase-logo.png) no-repeat 0 .35em;
+        background-size: 1em;
+        padding-left: 1.25em;
+      }
+    }
+  }
+}
+
+/* table overrides */
+.markdown-section {
+  em {
+    color: #787878;
+  }
+  table {
+    th, td {
+      border: 1px solid #ccc;
+    }
+    th {
+      background: #f6fafd;
+      padding: 8px 13px;
+    }
+  }
+}
+
+html {
+  .markdown-section, .page .section, .section {
+    code, pre {
+      font-family: "Liberation Mono",Consolas,Menlo,Courier,monospace;
+      font-size: 1.0em;
+      line-height: 1.5em;
+    }
+    code {
+      font-size: 1.0em;
+    }
+  }
+}
+.page .section pre > code {
+  font-size: .95em;
+  white-space: pre-wrap;
+}

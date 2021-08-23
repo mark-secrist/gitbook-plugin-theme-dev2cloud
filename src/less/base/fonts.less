@@ -1,0 +1,26 @@
+.font-face(@font-family, @filepath, @font-weight, @font-style){
+    @font-face {
+        font-family: @font-family;
+        src: url('fonts/@{filepath}.woff2') format('woff2'),
+            url('fonts/@{filepath}.woff') format('woff');
+        src: url('fonts/@{filepath}.eot');
+        src: local('@{font-family}'), local('@{filepath}'),
+            url('fonts/@{filepath}.eot?#iefix') format('embedded-opentype'),
+            url('fonts/@{filepath}.woff2') format('woff2'),
+            url('fonts/@{filepath}.woff') format('woff'),
+            url('fonts/@{filepath}.ttf') format('truetype'),
+            url('fonts/@{filepath}.svg#@{filepath}') format('svg');
+        font-weight:@font-weight;
+        font-style:@font-style;
+    }
+}
+
+.font-face('Liberation Mono', 'LiberationMono', normal, normal);
+.font-face('Liberation Sans', 'LiberationSans-Italic', normal, italic);
+.font-face('Liberation Sans', 'LiberationSans-Bold', bold, normal);
+.font-face('Liberation Mono', 'LiberationMono-Bold', bold, normal);
+.font-face('Liberation Mono', 'LiberationMono-BoldItalic', bold, italic);
+.font-face('Liberation Sans', 'LiberationSans-BoldItalic', bold, italic);
+.font-face('Liberation Mono', 'LiberationMono-Italic', normal, italic);
+.font-face('Liberation Sans', 'LiberationSans', normal, normal);
+

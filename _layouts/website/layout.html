@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "images/apple-touch-icon-precomposed-152.png"|resolveAsset }}">
+    <link rel="shortcut icon" href="{{ "images/icons/favicon.ico"|resolveAsset }}" type="image/x-icon">
+    <link rel="icon" href="{{ "images/icons/favicon.ico"|resolveAsset }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "images/icons/apple-icon-57x57.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "images/icons/apple-icon-60x60.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "images/icons/apple-icon-72x72.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "images/icons/apple-icon-76x76.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "images/icons/apple-icon-114x114.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "images/icons/apple-icon-120x120.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "images/icons/apple-icon-144x144.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "images/icons/apple-icon-152x152.png"|resolveAsset }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/icons/apple-icon-180x180.png"|resolveAsset }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "images/icons/android-icon-192x192.png"|resolveAsset }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/icons/favicon-32x32.png"|resolveAsset }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ "images/icons/favicon-96x96.png"|resolveAsset }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "images/icons/favicon-16x16.png"|resolveAsset }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ "images/icons/ms-icon-144x144.png"|resolveAsset }}/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="Couchbase">
+{% endblock %}
+
+{% block style %}
+    {### Include theme css before plugins css ###}
+    <link rel="stylesheet" href="{{ "styles/site.css"|resolveAsset }}">
+
+    {{ super() }}
+
+    {### Custom stylesheets for the book ###}
+
+    {% for type, style in config.styles %}
+        {% if fileExists(style) and type == "website" %}
+        <link rel="stylesheet" href="{{ style|resolveFile }}">
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{% block body %}{% endblock %}
