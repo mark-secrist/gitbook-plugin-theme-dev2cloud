@@ -1,5 +1,7 @@
 #! /bin/bash
-
+#####################################
+# Script to do basic build of artifacts
+#####################################
 # Cleanup folder
 rm -rf _assets
 

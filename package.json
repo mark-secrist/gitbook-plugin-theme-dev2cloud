@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-theme-couchbase",
+  "name": "gitbook-plugin-theme-dev2cloud",
   "description": "Couchbase Theme for GitBook",
   "main": "./index.js",
   "version": "1.0.0",
