@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-theme-dev2cloud",
-  "description": "Couchbase Theme for GitBook",
+  "description": "Dev2Cloud Theme for GitBook",
   "main": "./index.js",
   "version": "1.0.0",
   "engines": {
@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/couchbase-ps/gitbook-plugin-theme-couchbase.git"
+    "url": "https://github.com/mark-secrist/gitbook-plugin-theme-dev2cloud.git"
   },
-  "author": "Aaron Benton <aaron.benton@couchbase.com",
+  "author": "Mark Secrist",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/couchbase-ps/gitbook-plugin-theme-couchbase/issues"
+    "url": "https://github.com/mark-secrist/gitbook-plugin-theme-dev2cloud.git/issues"
   },
   "contributors": [],
   "gitbook": {
